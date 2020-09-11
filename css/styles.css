@@ -1,0 +1,230 @@
+/* Color Palette
+https://coolors.co/261132-f0a202-f5f9e9-64403e-ed6a5a-fffdfd
+$dark-purple: rgb(38, 17, 50);
+$marigold: rgb(240, 162, 2);
+$ivory: rgb(245, 249, 233);
+$rose-ebony: rgb(100, 64, 62);
+$terra-cotta: rgb(237, 106, 90);
+$white: rgb(255, 253, 253);
+*/
+
+/* Global styles
+---------------------------------*/
+
+/* The Box Model Fix*/
+html {
+    box-sizing: border-box;
+}
+*, *:before,*after {
+    box-sizing: inherit;
+}
+
+body {
+    background: ;
+    color: rgba(38, 17, 50, 1);
+    /* removes extra default space right and left */
+    margin: 0;
+    padding: 0; /* */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+img {
+    width: 300px;
+}
+a {
+    color:rgba(237, 106, 90, 1);
+}
+a:hover {
+    /* the underline of the link is removed*/
+    text-decoration: none; /* */
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 400;  
+}
+h1, h2 {
+    font-family: 'Nothing You Could Do', cursive;
+    margin: 0;
+}
+.container_text {
+    /* to make it adjust the content 
+    to a smaller screen*/
+    max-width: 800px;
+    /* to keep the space around the content
+    in smaller screens */
+    width: 85%;
+    /* placed the text in the middle 
+    without affecting the background colors */
+    margin: 0 auto; /* */
+    padding: 50px 0;
+
+}
+h3 {
+    margin-bottom: 0;
+}
+/* + matches to the first paragraph that comes
+after h3  */
+.item-details h3 + p {
+    font-style: italic;
+}
+/* ~ matches to the all the paragraph that comes
+after h3  */
+.item-details h3 ~ p {
+    margin: 0;
+}
+
+/* match section selectors that are direct child of the 
+div with class divider */
+.divider > section {
+    /* To separate the content of the project from the border */
+    border-bottom: 1px dashed rgb(38, 17, 50);
+    padding: 25px 0;
+}
+/* takes off the dotted border 
+on the last item of sections job and projects */
+.divider > section:last-child {
+    border-bottom: none; 
+}
+
+/* Profile section
+---------------------------------*/
+header {
+    background:rgb(240, 162, 2);
+}
+/* Projects section
+---------------------------------*/
+.projects {
+    background:rgb(255, 253, 253);
+}
+.projects a {
+    color:rgb(240, 162, 2);
+}
+/* The class of btn is used for the link of the project 
+to the source code, to avoid the btn style on a paragraph.*/
+.projects .btn{
+    background:rgb(240, 162, 2);
+    color:rgba(38, 17, 50); 
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+.projects .btn:hover {
+    background:rgba(240, 162, 2, 0.8) ;
+}
+.project-item {
+    /* overflow is a way to clear the float
+    style */
+    overflow: hidden; 
+}
+/*padding-bottom: 30px;*/
+.project-item h3 {
+    margin-top: 0;
+}
+/* Work experience section
+---------------------------------*/
+.work_experience {
+    background:rgba(237, 106, 90);
+}
+
+.job-summary {
+    /* Placed content centering vertically */
+    place-self: center;
+}
+
+.job-summary ul {
+    /* changed bullet points to squares */
+    list-style-type: square;
+}
+
+/* Education section
+---------------------------------*/
+.education p {
+    width: 60%;
+}
+
+/* Contact section
+---------------------------------*/
+footer {
+    background: rgba(100, 64, 62);
+    color:rgba(245, 249, 233);
+}
+
+footer a {
+    text-decoration:none;
+}
+
+footer a:hover {
+    color:rgb(245, 249, 233);
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+.contact-list li {
+    padding: 5px 0;
+}
+
+/* Responsive
+---------------------------------*/
+@media screen and (min-width: 850px){
+    .project-item img {
+        float: left;
+        margin-right: 20px;  
+    }
+}
+@media screen and (min-width: 700px){
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:15px;
+    }
+    header, footer {
+        text-align: center;
+    }
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+    .contact-list li {
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px){
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+} 
+@media screen and (max-width: 500px){
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    body {
+        font-size: 13px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 800px){
+    .education{
+        background-image: url(../images/bromelia-petals2.JPG);
+        background-size: cover;
+        background-position: top right;
+        padding-bottom: 25px;
+    }
+}
