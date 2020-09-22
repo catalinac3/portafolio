@@ -20,7 +20,6 @@ html {
 }
 
 body {
-    background: ;
     color: rgba(38, 17, 50, 1);
     /* removes extra default space right and left */
     margin: 0;
@@ -160,7 +159,7 @@ to the source code, to avoid the btn style on a paragraph.*/
 .tab-bar {
     background-color: white;
     border-bottom-style: solid;
-    border-color: purple;
+    border-color: rgba(237, 106, 90, 1);
     border-width: 1px;
     padding: 0 10px;
     z-index:1;
@@ -175,14 +174,14 @@ to the source code, to avoid the btn style on a paragraph.*/
   }
   
   .tab-button:hover {
-    border-color: purple;
+    border-color:rgba(237, 106, 90, 1);
   }
   
   /* when the button is active */
   .tab-button:focus {
     /* focus has a default outline */
     outline:none;
-    border-color: purple;
+    border-color:rgba(237, 106, 90, 1);
     background-color: white;
     border-width: 2px 2px 0 2px;
   }
