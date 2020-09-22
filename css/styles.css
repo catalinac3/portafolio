@@ -73,7 +73,7 @@ button {
     padding: 8px 18px;
     font-size: 14px;
     color: black;
-    border-radius: 4px;
+    border-radius: 2px;
     text-align: center;
   }
   
@@ -163,13 +163,14 @@ to the source code, to avoid the btn style on a paragraph.*/
     border-color: purple;
     border-width: 1px;
     padding: 0 10px;
-    z-index: 10;
+    z-index:1;
   }
   
   .tab-button{
     border: solid;
     border-color: white;
     border-width: 1px 1px 0 1px;
+    margin-bottom: -1px;
     z-index:2;
   }
   
@@ -179,10 +180,11 @@ to the source code, to avoid the btn style on a paragraph.*/
   
   /* when the button is active */
   .tab-button:focus {
-    background-color: white;
-    border: solid;
+    /* focus has a default outline */
+    outline:none;
     border-color: purple;
-    border-width: 2px 2px 0px 2px;
+    background-color: white;
+    border-width: 2px 2px 0 2px;
   }
  
 /* All education section
