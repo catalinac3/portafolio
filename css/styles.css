@@ -68,6 +68,15 @@ h1, h2 {
 h3 {
     margin-bottom: 0;
 }
+
+button {
+    padding: 8px 18px;
+    font-size: 14px;
+    color: black;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
 /* + matches to the first paragraph that comes
 after h3  */
 .item-details h3 + p {
@@ -143,9 +152,42 @@ to the source code, to avoid the btn style on a paragraph.*/
     list-style-type: square;
 }
 
-/* Education section
+/* Tab all education
 ---------------------------------*/
-.education p {
+.tab-container{
+    padding: 20px 0;
+}
+.tab-bar {
+    background-color: white;
+    border-bottom-style: solid;
+    border-color: purple;
+    border-width: 1px;
+    padding: 0 10px;
+    z-index: 10;
+  }
+  
+  .tab-button{
+    border: solid;
+    border-color: white;
+    border-width: 1px 1px 0 1px;
+    z-index:2;
+  }
+  
+  .tab-button:hover {
+    border-color: purple;
+  }
+  
+  /* when the button is active */
+  .tab-button:focus {
+    background-color: white;
+    border: solid;
+    border-color: purple;
+    border-width: 2px 2px 0px 2px;
+  }
+ 
+/* All education section
+---------------------------------*/
+.all-education p {
     width: 60%;
 }
 
@@ -221,7 +263,7 @@ footer a:hover {
     }
 }
 @media screen and (min-width: 800px){
-    .education{
+    .all-education{
         background-image: url(../images/bromelia-petals2.JPG);
         background-size: cover;
         background-position: top right;

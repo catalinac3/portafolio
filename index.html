@@ -1,3 +1,7 @@
+<!-- TODO:
+  - be consistent with the naming naming-styles or namingStyles
+  - be consistent with "" or '' -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +13,7 @@
     <title>Catalina's portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js-files/src.js" defer></script>
   </head>
   <body>
     <main>
@@ -129,12 +134,26 @@
         * Maybe a Skill displaying section 
         * Or a language section
        -->
-
+      <!-- ****************** TAB - EDUCATION  ****************** -->
+      <section class="tab-container container_text">
+        <div class="tab-bar">
+          <!-- onclick event occurs when the user clicks on an element.-->
+          <button class="tab-button" onclick="openEducation('formalEducation')">
+            Formal education
+          </button>
+          <button class="tab-button" onclick="openEducation('programmingCourses')">
+            Programming Courses
+          </button>
+          <button class="tab-button" onclick="openEducation('Certification')">
+            Certification
+          </button>
+        </div>
+      </section>
+      <!-- ****************** ALL EDUCATION  ****************** -->
       <!-- ****************** UNIVERSITY EDUCATION  ****************** -->
-      <section class="education">
-        <div class="container_text item-details">
+      <section class="all-education">
+        <div id="formalEducation" class="education container_text item-details">
           <h2>Education</h2>
-
           <!-- Education University Title 1 -->
           <section>
             <h3>The University of Western Ontario - London, Canada</h3>
@@ -154,7 +173,17 @@
           </section>
         </div>
         <!-- End of University Education block. -->
-      </section>
+
+        <div id="programmingCourses" class="education container_text item-details" style="display:none">
+          <h2>Courses</h2>
+          <p>here! Course title</p>
+        </div>
+
+        <div id="Certification" class="education container_text item-details" style="display:none">
+          <h2>Certification</h2>
+          <p>here! list certificates</p>
+        </div>
+      </section>  
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
       <footer>
