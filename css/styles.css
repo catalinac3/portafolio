@@ -54,7 +54,7 @@ h2 {
   font-family: "Nothing You Could Do", cursive;
   margin: 0;
 }
-.container_text {
+.container-text {
   /* to make it adjust the content 
     to a smaller screen*/
   max-width: 800px;
@@ -139,7 +139,7 @@ to the source code, to avoid the btn style on a paragraph.*/
 }
 /* Work experience section
 ---------------------------------*/
-.work_experience {
+.work-experience {
   background: rgba(237, 106, 90);
 }
 
