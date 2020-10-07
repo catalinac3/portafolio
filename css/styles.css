@@ -76,8 +76,8 @@ h3 {
 button {
   padding: 8px 18px;
   font-size: 14px;
-  color: black;
-  border-radius: 2px;
+  color: rgba(38, 17, 50);
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -120,15 +120,12 @@ header {
 }
 /* The class of btn is used for the link of the project 
 to the source code, to avoid the btn style on a paragraph.*/
-.projects .btn {
-  background: rgb(240, 162, 2);
-  color: rgba(38, 17, 50);
-  padding: 4px;
-  text-decoration: none;
-  border-radius: 4px;
+.projects button {
+  background: rgb(255, 253, 253);
+  border: 1px solid rgb(240, 162, 2);
   display: inline-block;
 }
-.projects .btn:hover {
+.projects button:hover {
   background: rgba(240, 162, 2, 0.8);
 }
 .project-item {
@@ -146,6 +143,14 @@ to the source code, to avoid the btn style on a paragraph.*/
   background: rgba(237, 106, 90);
 }
 
+.work-experience a{
+  color: rgba(100, 64, 62);
+  text-decoration: none;
+}
+
+.work-experience a:hover{
+  color: rgb(245, 249, 233);
+}
 .job-summary {
   /* Placed content centering vertically */
   place-self: center;
@@ -155,6 +160,7 @@ to the source code, to avoid the btn style on a paragraph.*/
   /* changed bullet points to squares */
   list-style-type: square;
 }
+
 
 /* Tab all education
 ---------------------------------*/
@@ -196,7 +202,16 @@ to the source code, to avoid the btn style on a paragraph.*/
 .all-education p {
   width: 60%;
 }
-
+.all-education h2 {
+  color: rgba(237, 106, 90, 1);
+}
+.all-education .container-text {
+  padding: 0;
+}
+.heigth-item {
+  max-height: 290px;
+  overflow: auto;
+}
 /* Contact section
 ---------------------------------*/
 footer {
@@ -212,6 +227,9 @@ footer a:hover {
   color: rgb(245, 249, 233);
 }
 
+footer .container-text {
+  padding: 30px 0;
+}
 .contact-list {
   list-style-type: none;
   padding: 0;
@@ -226,6 +244,14 @@ footer a:hover {
   .project-item img {
     float: left;
     margin-right: 20px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .all-education {
+    background-image: url(../images/bromelia-petals2.JPG);
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 25px;
   }
 }
 @media screen and (min-width: 700px) {
@@ -255,6 +281,11 @@ footer a:hover {
     font-size: 25px;
   }
 }
+/* this code takes the tab text for smaller screens */
+@media screen and (max-width: 672px) {
+  .button-text {
+    display:none;
+  }}
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 40px;
@@ -269,11 +300,4 @@ footer a:hover {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 800px) {
-  .all-education {
-    background-image: url(../images/bromelia-petals2.JPG);
-    background-size: cover;
-    background-position: top right;
-    padding-bottom: 25px;
-  }
-}
+
