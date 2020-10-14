@@ -199,6 +199,9 @@ to the source code, to avoid the btn style on a paragraph.*/
 
 /* All education section
 ---------------------------------*/
+.all-education{
+  padding-bottom: 10px;
+}
 .all-education p {
   width: 60%;
 }
