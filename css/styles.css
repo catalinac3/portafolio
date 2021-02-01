@@ -107,8 +107,7 @@ on the last item of sections job and projects */
 /* Profile section
 ---------------------------------*/
 header {
-  background:rgb(185, 146, 159);
-
+  background: rgb(185, 146, 159);
 }
 /* Projects section
 ---------------------------------*/
@@ -116,7 +115,7 @@ header {
   background: rgb(255, 253, 253);
 }
 .projects a {
-  color:rgb(185, 146, 159);
+  color: rgb(185, 146, 159);
 }
 /* The class of btn is used for the link of the project 
 to the source code, to avoid the btn style on a paragraph.*/
@@ -126,7 +125,7 @@ to the source code, to avoid the btn style on a paragraph.*/
   display: inline-block;
 }
 .projects button:hover {
-  background:rgb(185, 146, 159);
+  background: rgb(185, 146, 159);
 }
 .project-item {
   /* overflow is a way to clear the float
@@ -144,12 +143,12 @@ to the source code, to avoid the btn style on a paragraph.*/
   background: rgba(237, 106, 90);
 }
 
-.work-experience a{
+.work-experience a {
   color: rgba(100, 64, 62);
   text-decoration: none;
 }
 
-.work-experience a:hover{
+.work-experience a:hover {
   color: rgb(245, 249, 233);
 }
 .job-summary {
@@ -161,7 +160,6 @@ to the source code, to avoid the btn style on a paragraph.*/
   /* changed bullet points to squares */
   list-style-type: square;
 }
-
 
 /* Tab all education
 ---------------------------------*/
@@ -200,7 +198,7 @@ to the source code, to avoid the btn style on a paragraph.*/
 
 /* All education section
 ---------------------------------*/
-.all-education{
+.all-education {
   padding-bottom: 10px;
 }
 .all-education p {
@@ -288,8 +286,9 @@ footer .container-text {
 /* this code takes the tab text for smaller screens */
 @media screen and (max-width: 672px) {
   .button-text {
-    display:none;
-  }}
+    display: none;
+  }
+}
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 40px;
@@ -304,4 +303,3 @@ footer .container-text {
     font-size: 14px;
   }
 }
-
