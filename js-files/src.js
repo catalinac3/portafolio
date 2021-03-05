@@ -1,15 +1,7 @@
-// gives the style :focus to the element.  Displays the tab programming
-// courses on the education section when the page is load.
-//todo: find another way!!!!!!!!!!!!
-//document.getElementById("start-focus").focus();
-// to take the foucs out of the education section and
-// give it to the top of the page, when the page is loaded.
-//document.querySelector("h1").focus();
-
 /**
  * @param {String} educationType;
- * Control content displayed of the tab menu, which changes by clicking
- * on a button of the tab.
+ * Control content displayed of the tab menu in the education section,
+ * which changes by clicking on a button of the tab.
  */
 function openEducation(educationType) {
   let selectedText = document.getElementById(educationType);
@@ -22,18 +14,33 @@ function openEducation(educationType) {
   }
 }
 
-//----------------hover text for the icons--------------------------------
-// function displayText(e) {
-//   console.log("mouseover");
-//   let title = this.title;
-//   this.setAttribute("tooltip", title);
-// }
+// todo --> use youtube api to control when the video
+// stops playing and continous to play
 
-// function hideText(e) {
-//   console.log("mouseout");
-//   this.removeAttribute("tooltip");
-// }
+videoLink = document.querySelector("#video-hyperlink");
+video = document.querySelector("#video-pop-up");
+overlay = document.querySelector("#overlay");
+closebtn = document.querySelector(".close-btn")
 
-// let jsIcon = document.querySelector("#js");
-// jsIcon.addEventListener("mouseover", displayText, false);
-// jsIcon.addEventListener("mouseout", hideText, false);
+videoLink.addEventListener("click", showVideo);
+closebtn.addEventListener("click", hideVideo);
+
+/**
+ * shows video when pressing on
+ * the video icon
+ */
+function showVideo() {
+  console.log("show video");
+  overlay.style.display = "block";
+  video.style.display = "block";
+}
+
+/**
+ * hides video when pressing on
+ * the video-slash icon
+ */
+function hideVideo() {
+  console.log("display video");
+  video.style.display = "none";
+  overlay.style.display = "none";
+}

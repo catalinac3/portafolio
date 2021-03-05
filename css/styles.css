@@ -136,6 +136,39 @@ to the source code, to avoid the btn style on a paragraph.*/
 .project-item h3 {
   margin-top: 0;
 }
+.close-btn {
+  /*absolute: position relative to the nearest 
+  positioned ancestor*/
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1px 5px;
+  font-size: 1.25rem;
+}
+
+#video-pop-up {
+  display: none;
+  /*fixed: is position relative to the viewport
+  it stays in the same place even if the page is 
+  scrolled */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 560px;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  /*opacity: 0;*/
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(38, 17, 50, 0.5);
+}
 
 /* Work experience section
 ---------------------------------*/
