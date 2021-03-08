@@ -17,6 +17,8 @@ function openEducation(educationType) {
 // todo --> use youtube api to control when the video
 // stops playing and continous to play
 
+// todo --> responsive design for video
+
 videoLink = document.querySelector("#video-hyperlink");
 video = document.querySelector("#video-pop-up");
 overlay = document.querySelector("#overlay");

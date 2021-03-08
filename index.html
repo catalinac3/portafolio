@@ -9,7 +9,7 @@
     <title>Catalina's portfolio</title>
     <!-- importing google fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <!-- importing awesome fonts icons -->
@@ -24,28 +24,61 @@
   </head>
   <body>
     <main>
-      <!-- ***********************  ABOUT / PROFILE  *********************** -->
-      <header>
+      <!-- ***********************  INTRODUCTION SECTION *********************** -->
+      <div class="intro full-screen">
         <div class="container-text">
-          <h1>Catalina Cruz</h1>
-          <h2>
-            Engineer with experience in research, intercultural competences, and
-            IT affinity
-          </h2>
-
-          <p>
-            Chemical Engineer with a master in science and research experience,
-            I'm building my way towards a Software Developer career. Making
-            online and classroom courses, learning through project based
-            programs, also trying my own projects, as it is the case of this
-            portafolio.
-          </p>
-          <p>
-            I'm curious and responsible and always looking after the way things
-            work.
-          </p>
+          <header>
+            <h1>Catalina Cruz</h1>
+           
+              <h2>
+                Software Developer in progress
+                <!-- ellipsis -->
+                <span class="dot-dot-dot">
+                  <span></span><span></span><span></span>
+                </span>
+              </h2>
+            
+          </header>
+          <div class="list-wrapper">
+            <div class="list">
+              <h2>Skills</h2>
+              <ol>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ol>
+            </div>
+            <div class="list">
+              <h2>Tools</h2>
+              <ol>
+                <li>VS Code</li>
+                <li>Git</li>
+              </ol>
+            </div>
+          </div>
         </div>
-      </header>
+        <div class="icons">
+          <div>
+            <a
+              href="https://www.linkedin.com/in/catalina-cruz-187138194"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+          <div>
+            <a href="https://github.com/catalinac3" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <div>
+            <a href="mailto:cdianacatalina@gmail.com"
+              ><i class="fas fa-envelope-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="vertical"></div>
+      </div>
 
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
       <section class="projects">
@@ -84,7 +117,7 @@
             <!-- video pop up -->
             <a href="#video-pop-up" id="video-hyperlink"
               ><i class="fas fa-video"></i
-                ></a>
+            ></a>
 
             <div id="video-pop-up">
               <iframe
@@ -95,8 +128,9 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <button class="close-btn"><i class="fas fa-video-slash"></i
-                ></button>
+              <button class="close-btn">
+                <i class="fas fa-video-slash"></i>
+              </button>
             </div>
             <div id="overlay"></div>
             <!--  -->
@@ -210,7 +244,7 @@
           <!-- onclick event occurs when the user clicks on an element.-->
           <button
             id="start-focus"
-            class="tab-button"
+            class="tab-butto
             onclick="openEducation('programmingCourses')"
           >
             <span class="button-text">Programming Courses</span
@@ -324,36 +358,8 @@
         </div>
       </section>
 
-      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <footer>
-        <div class="container-text">
-          <h2>Let's Keep in Touch!</h2>
-
-          <!-- Social media and contact links. -->
-          <ul class="contact-list">
-            <li>
-              <a href="mailto:cdianacatalina@gmail.com"
-                >cdianacatalina@gmail.com</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/catalina-cruz-187138194"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/catalinac3" target="_blank">Github</a>
-            </li>
-            <li>
-              <a href="https://glitch.com/@cdianacatalina" target="_blank"
-                >Glitch</a
-              >
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <!-- *****************  FOOTER  ***************** -->
+      <footer></footer>
     </main>
   </body>
 </html>
