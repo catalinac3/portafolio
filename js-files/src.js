@@ -1,3 +1,19 @@
+// this code changes the arrow color in the intro page
+// while the mouse hover and out of hover
+
+let downArrow = document.querySelector(".down-arrow img");
+
+downArrow.addEventListener("mouseover", changeOnHover, false);
+downArrow.addEventListener("mouseout", changeOutHover, false);
+
+function changeOnHover() {
+  downArrow.setAttribute("src", "images/downArrowHover.svg");
+}
+
+function changeOutHover() {
+  downArrow.setAttribute("src", "images/downArrow.svg");
+}
+
 /**
  * @param {String} educationType;
  * Control content displayed of the tab menu in the education section,
@@ -22,7 +38,7 @@ function openEducation(educationType) {
 videoLink = document.querySelector("#video-hyperlink");
 video = document.querySelector("#video-pop-up");
 overlay = document.querySelector("#overlay");
-closebtn = document.querySelector(".close-btn")
+closebtn = document.querySelector(".close-btn");
 
 videoLink.addEventListener("click", showVideo);
 closebtn.addEventListener("click", hideVideo);
