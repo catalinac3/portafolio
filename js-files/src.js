@@ -1,5 +1,5 @@
-// this code changes the arrow color in the intro page
-// while the mouse hover and out of hover
+// This code changes the arrow color in the intro page
+// while the mouse hover in and out of the arrow
 
 let downArrow = document.querySelector(".down-arrow img");
 
@@ -30,13 +30,53 @@ function openEducation(educationType) {
   }
 }
 
-// todo --> use youtube api to control when the video
-// stops playing and continous to play
+// This code uses Iframe player API
+// todo  start to play the video when the video is shown
+// stop playing or pause, when the video is hidden.
+let player;
+function onYouTubeIframeAPIReady() {
+  //first parameter of the player constructor is the DOM ID.
+  //second parameter player options.
+  player = new YT.Player("video", {
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
 
-// todo --> responsive design for video
+function onPlayerReady(event) {
+  document.getElementById("video").style.borderColor = "#FF6D00";
+  console.log("video is ready");
+  event.target.setVolume(60);
+  console.log("the volume is set to 60%");
+}
+
+function changeBorderColor(playerStatus) {
+  var color;
+  if (playerStatus == -1) {
+    color = "#37474F"; // unstarted = gray
+  } else if (playerStatus == 0) {
+    color = "#FFFF00"; // ended = yellow
+  } else if (playerStatus == 1) {
+    color = "#33691E"; // playing = green
+  } else if (playerStatus == 2) {
+    color = "#DD2C00"; // paused = red
+  } else if (playerStatus == 3) {
+    color = "#AA00FF"; // buffering = purple
+  } else if (playerStatus == 5) {
+    color = "#FF6DOO"; // video cued = orange
+  }
+  if (color) {
+    document.getElementById("video").style.borderColor = color;
+  }
+}
+function onPlayerStateChange(event) {
+  changeBorderColor(event.data);
+}
 
 videoLink = document.querySelector("#video-hyperlink");
-video = document.querySelector("#video-pop-up");
+videoPopUp = document.querySelector(".video-pop-up");
 overlay = document.querySelector("#overlay");
 closebtn = document.querySelector(".close-btn");
 
@@ -44,21 +84,23 @@ videoLink.addEventListener("click", showVideo);
 closebtn.addEventListener("click", hideVideo);
 
 /**
- * shows video when pressing on
- * the video icon
+ * shows video when pressing on the video icon
+ * if the video was paused previously it would continue playing
  */
 function showVideo() {
   console.log("show video");
   overlay.style.display = "block";
-  video.style.display = "block";
+  videoPopUp.style.display = "block";
+  player.playVideo();
 }
 
 /**
- * hides video when pressing on
- * the video-slash icon
+ * hides video when pressing on the video-slash icon
+ * video will pause
  */
 function hideVideo() {
   console.log("display video");
-  video.style.display = "none";
+  videoPopUp.style.display = "none";
   overlay.style.display = "none";
+  player.pauseVideo();
 }

@@ -20,10 +20,33 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- IFrame Player API  -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js-files/src.js" defer></script>
   </head>
   <body>
     <main>
+      <!-- links fixed to the right margin of the page -->
+      <div class="icons">
+        <div>
+          <a
+            href="https://www.linkedin.com/in/catalina-cruz-187138194"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <div>
+          <a href="https://github.com/catalinac3" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <div>
+          <a href="mailto:cdianacatalina@gmail.com"
+            ><i class="fas fa-envelope-square"></i
+          ></a>
+        </div>
+      </div>
+      <div class="vertical"></div>
       <!-- ***********************  INTRODUCTION SECTION *********************** -->
       <div class="intro full-screen">
         <div class="container-text">
@@ -68,56 +91,14 @@
             </a>
           </div>
         </div>
-        <!--  -->
-        <div class="icons">
-          <div>
-            <a
-              href="https://www.linkedin.com/in/catalina-cruz-187138194"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </div>
-          <div>
-            <a href="https://github.com/catalinac3" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </div>
-          <div>
-            <a href="mailto:cdianacatalina@gmail.com"
-              ><i class="fas fa-envelope-square"></i
-            ></a>
-          </div>
-        </div>
-        <div class="vertical"></div>
       </div>
 
-      <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-      <section id="projects-section" class="projects">
+      <!-- ********************  PROJECTS SECTION ********************* -->
+      <section id="projects-section" class="full-screen projects">
         <div class="container-text divider">
           <h2>Programming Projects</h2>
 
           <!-- Project 1 -->
-          <section class="project-item">
-            <img
-              src="images/ai_tkinter_tic_tac_toe1.PNG"
-              alt="tic-tac-toe graphical interface"
-            />
-            <h3>Tic-tac-toe</h3>
-            <p>
-              As the final project for the course Python 1 at ReDI we sugessted
-              the tic-tac-toe in raw python. I found the project fun an took it
-              a bit further by making it work in a graphical user interface,
-              using the Tkinter library.
-            </p>
-            <!--TODO this part I don't understand it: target="_blank" -->
-            <a href="https://github.com/catalinac3/Tic-tac-toe"
-              ><button>Code</button></a
-            >
-            <i class="fab fa-python" title="Python"></i>
-          </section>
-          <!-- End of project 1 -->
-
-          <!-- Project 2 -->
           <section class="project-item">
             <img
               id="image-weather-app"
@@ -130,14 +111,15 @@
               ><i class="fas fa-video"></i
             ></a>
 
-            <div id="video-pop-up">
+            <div class="video-pop-up">
               <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/yvMBvCW3Gpk"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                id="video"
+                type="text/html"
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/yvMBvCW3Gpk?enablejsapi=1"
                 allowfullscreen
+                style="border: solid 4px #37474f"
               ></iframe>
               <button class="close-btn">
                 <i class="fas fa-video-slash"></i>
@@ -163,6 +145,27 @@
             <i class="fab fa-bootstrap" title="Bootstrap"></i>
           </section>
 
+          <!-- End of project 1 -->
+
+          <!-- Project 2 -->
+          <section class="project-item">
+            <img
+              src="images/ai_tkinter_tic_tac_toe1.PNG"
+              alt="tic-tac-toe graphical interface"
+            />
+            <h3>Tic-tac-toe</h3>
+            <p>
+              As the final project for the course Python 1 at ReDI we sugessted
+              the tic-tac-toe in raw python. I found the project fun an took it
+              a bit further by making it work in a graphical user interface,
+              using the Tkinter library.
+            </p>
+            <!--TODO this part I don't understand it: target="_blank" -->
+            <a href="https://github.com/catalinac3/Tic-tac-toe"
+              ><button>Code</button></a
+            >
+            <i class="fab fa-python" title="Python"></i>
+          </section>
           <!-- End of project 2 -->
         </div>
         <!-- End of Project block. -->
