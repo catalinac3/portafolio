@@ -3,6 +3,7 @@ https://coolors.co/261132-f0a202-f5f9e9-64403e-ed6a5a-fffdfd
 Englisch lavender: rgb(185, 146, 159);
 terra-cotta (rosa): rgb(237, 106, 90);
 white: rgb(255, 253, 253);
+grape: rgba(38, 17, 50, 0.5)
 --------
 marigold: rgb(240, 162, 2);  not used
 ivory (white): rgb(245, 249, 233);
@@ -36,7 +37,7 @@ html {
   max-width: 1100px;
   /* Make room for the icons bar on the right and the same space on
    * the left. */
-  width: calc(90% - 48px);
+  width: calc(90% - 64px);
   /* placed the text in the middle 
     without affecting the background colors */
   margin: 0 auto;
@@ -52,6 +53,11 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   line-height: 1.5;
+}
+h1,
+h2 {
+  font-family: "Lato", sans-serif;
+  text-align: left;
 }
 
 h1 {
@@ -69,12 +75,6 @@ h2 {
   margin-bottom: 1em;
 }
 
-h1,
-h2 {
-  font-family: "Lato", sans-serif;
-  text-align: left;
-}
-
 h3 {
   margin-bottom: 0;
 }
@@ -86,7 +86,7 @@ a {
 a:hover {
   /* the underline of the link is removed*/
   text-decoration: none;
-  color: rgba(237, 106, 90, 1);
+  color: rgba(237, 106, 90);
 }
 i {
   font-size: 23px;
@@ -100,15 +100,8 @@ button {
   text-align: center;
 }
 
-/* + matches to the first paragraph that comes
-after h3  */
-.item-details h3 + p {
-  font-style: italic;
-}
-/* ~ matches to the all the paragraph that comes
-after h3  */
-.item-details h3 ~ p {
-  margin: 0;
+button i {
+  vertical-align: sub;
 }
 
 /* match section selectors that are direct child of the 
@@ -123,6 +116,35 @@ on the last item of sections job and projects */
 .divider > section:last-child {
   border-bottom: none;
 }
+
+/* ----vertical bar ---- */
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 24px;
+  right: 5%;
+  bottom: 26%;
+  text-align: center;
+  z-index: 8;
+}
+
+.icons div {
+  margin-top: 4px;
+}
+
+.vertical {
+  width: 6px;
+  margin: 0 9px;
+  background-color: black;
+  border-radius: 3px;
+  height: 20%;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+/* ----end vertical bar ---- */
 
 /* INTRODUCTION SECTION
 ---------------------------------*/
@@ -179,32 +201,6 @@ steps of an animation*/
   font-size: 150%;
 }
 
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  width: 24px;
-  right: 5%;
-  bottom: 26%;
-  text-align: center;
-}
-
-.icons div {
-  margin-top: 4px;
-}
-
-.vertical {
-  width: 6px;
-  margin: 0 9px;
-  background-color: black;
-  border-radius: 3px;
-  height: 20%;
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-}
-
 .down-arrow {
   position: absolute;
   bottom: 20px;
@@ -237,6 +233,24 @@ steps of an animation*/
 .projects a {
   color: rgb(185, 146, 159);
 }
+.projects a:hover {
+  color: rgba(237, 106, 90);
+}
+.animated-link:hover {
+  display: inline-block;
+  animation: vibrate 1.4s infinite;
+  animation-timing-function: linear;
+}
+@keyframes vibrate {
+  25% {
+    transform: rotateZ(20deg);
+  }
+
+  75% {
+    transform: rotateZ(-20deg);
+  }
+}
+
 /* The class of btn is used for the link of the project 
 to the source code, to avoid the btn style on a paragraph.*/
 .projects button {
@@ -244,8 +258,10 @@ to the source code, to avoid the btn style on a paragraph.*/
   border: 1px solid rgb(185, 146, 159);
   display: inline-block;
 }
+
 .projects button:hover {
-  background: rgb(185, 146, 159);
+  background: rgba(237, 106, 90);
+  border-color: rgba(237, 106, 90);
 }
 .project-item {
   /* overflow is a way to clear the float
@@ -289,88 +305,118 @@ to the source code, to avoid the btn style on a paragraph.*/
   background-color: rgba(38, 17, 50, 0.5);
 }
 
-/* Work experience section
+/* ALL EDUCATION AND WORK
 ---------------------------------*/
-.work-experience {
-  background: rgba(237, 106, 90, 0.3);
+/* Tab ---------------------------------*/
+.education-and-work {
+  height: 500px;
+  background-color: rgba(237, 106, 90, 0.3);
 }
 
-.work-experience a {
-  color: rgba(100, 64, 62);
-  text-decoration: none;
-}
-
-.work-experience a:hover {
-  color: rgb(245, 249, 233);
-}
-.job-summary {
-  /* Placed content centering vertically */
-  place-self: center;
-}
-
-.job-summary ul {
-  /* changed bullet points to squares */
-  list-style-type: square;
-}
-
-/* Tab all education
----------------------------------*/
 .tab-container {
-  padding: 20px 0;
+  padding-bottom: 0;
+  border-color: rgba(237, 106, 90);
 }
+
 .tab-bar {
-  background-color: white;
+  border-color: rgba(237, 106, 90);
   border-bottom-style: solid;
-  border-color: rgba(237, 106, 90, 1);
-  border-width: 1px;
+  border-width: 2px;
   padding: 0 10px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .tab-button {
   border: solid;
   border-color: white;
   border-width: 1px 1px 0 1px;
-  margin-bottom: -1px;
-  z-index: 2;
+  margin-bottom: -2px;
+  z-index: 4;
 }
 
 .tab-button:hover {
-  border-color: rgba(237, 106, 90, 1);
+  border-color: rgba(237, 106, 90);
 }
 
 /* when the button is active */
-.tab-button:focus {
+.focus {
   /* focus has a default outline */
   outline: none;
-  border-color: rgba(237, 106, 90, 1);
+  border-color: rgba(237, 106, 90);
   background-color: white;
   border-width: 2px 2px 0 2px;
 }
 
-/* All education section
----------------------------------*/
-.all-education {
-  padding-bottom: 10px;
+/* Tab Content--------------------------------*/
+
+.all-tab-content {
+  position: relative;
+  height: 80%;
 }
-.all-education p {
+
+.all-tab-content p {
   width: 60%;
+  margin: 0 15px;
 }
-.all-education h2 {
-  color: rgba(237, 106, 90, 1);
+
+.tab-content {
+  background: white;
+  border: 2px solid rgb(237, 106, 90);
+  border-top: 0;
+  position: relative;
+  height: 70%;
+  padding-top: 0;
 }
-.all-education .container-text {
-  padding: 0;
-}
-.heigth-item {
-  max-height: 290px;
+
+.item-details {
   overflow: auto;
+}
+
+.item-details h3,
+.item-details h2 {
+  margin-inline-start: 5px;
+}
+/* + matches to the first paragraph that comes
+after h3  */
+.item-details h3 + p {
+  font-style: italic;
+}
+
+/* hides the titles for large screens */
+/* + matches to the first h2 that comes
+  */
+.item-details h2:first-child {
+  display: none;
+}
+/* --------scrollbar------------ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(237, 106, 90);
+  /* background: #555; */
 }
 /* Footer
 ---------------------------------*/
 footer {
-  background-color: rgb(100, 64, 62);
-  color: rgb(245, 249, 233);
+  border: black;
+  background-color: #888;
+  color: white;
+  /* background-color: rgb(105, 105, 105); */
+  /* color: white; */
   text-align: center;
   padding: 20px 0;
 }
@@ -378,27 +424,14 @@ footer {
 /* Responsive
 ---------------------------------*/
 
-/* lists from the intro section  */
 @media screen and (min-width: 850px) {
   .project-item img {
     float: left;
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 800px) {
-  .all-education {
-    background-image: url(../images/bromelia-petals2.JPG);
-    background-size: cover;
-    background-position: top right;
-    padding-bottom: 25px;
-  }
-}
+
 @media screen and (min-width: 700px) {
-  .job-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 15px;
-  }
   header {
     text-align: center;
   }
@@ -411,15 +444,17 @@ footer {
   h2 {
     font-size: 25px;
   }
-  /* lists from the intro section 
-  .list li {
-    font-size: 16px;
-  } */
 }
-/* this code takes the tab text for smaller screens */
-@media screen and (max-width: 672px) {
+
+@media screen and (max-width: 900px) {
+  /* hides the text of the tab for smaller screens */
   .button-text {
     display: none;
+  }
+  /* displays title of the section in small screens */
+  .item-details h2:first-child {
+    color: rgba(237, 106, 90);
+    display: block;
   }
   iframe {
     width: 90vw;
@@ -434,14 +469,25 @@ footer {
   h2 {
     font-size: 20px;
   }
-  /* lists from the intro section  */
-  /* .list li {
-    font-size: 13px;
-  } */
   body {
     font-size: 13px;
   }
   h3 {
     font-size: 14px;
+  }
+}
+
+/* change incons or buttons size in 
+smaller screens als 376px */
+
+@media screen and (max-width: 376px) {
+  .education-and-work button {
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 298px) {
+  .education-and-work button {
+    padding: 8px 7px;
   }
 }

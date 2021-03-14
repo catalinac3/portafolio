@@ -1,7 +1,7 @@
 // This code changes the arrow color in the intro page
 // while the mouse hover in and out of the arrow
 
-let downArrow = document.querySelector(".down-arrow img");
+const downArrow = document.querySelector(".down-arrow img");
 
 downArrow.addEventListener("mouseover", changeOnHover, false);
 downArrow.addEventListener("mouseout", changeOutHover, false);
@@ -14,19 +14,31 @@ function changeOutHover() {
   downArrow.setAttribute("src", "images/downArrow.svg");
 }
 
+const texts = document.querySelectorAll(".tab-content");
+const buttonInFocus = document.querySelectorAll(".tab-button");
+console.log(buttonInFocus);
 /**
- * @param {String} educationType;
- * Control content displayed of the tab menu in the education section,
+ * @param {String} contentType;
+ * Controls the content displayed on the tab menu in the education section,
  * which changes by clicking on a button of the tab.
+ * it also controls the button style on the tab menu by adding and removing
+ * the focus class
  */
-function openEducation(educationType) {
-  let selectedText = document.getElementById(educationType);
+function openTab(contentType) {
+  const textId = "#" + contentType;
+  const buttonSelector = ".tab-button" + "." + contentType;
+  const selectedText = document.querySelector(textId);
+  const selectedButton = document.querySelector(buttonSelector);
   // x is the array containing the content that each button is suppossed to display
-  let texts = document.getElementsByClassName("education");
-
   for (let i = 0; i < texts.length; i++) {
     // desactivates any text that is not being selected.
-    texts[i].style.display = texts[i].id === selectedText.id ? "block" : "none";
+    texts[i].style.display = texts[i] === selectedText ? "block" : "none";
+    if (buttonInFocus[i] == selectedButton) {
+      buttonInFocus[i].classList.add("focus");
+    } else {
+      // remove the class focus in not selected buttons.
+      buttonInFocus[i].classList.remove("focus");
+    }
   }
 }
 
@@ -46,26 +58,18 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  document.getElementById("video").style.borderColor = "#FF6D00";
-  console.log("video is ready");
+  document.getElementById("video").style.borderColor = "black";
   event.target.setVolume(60);
-  console.log("the volume is set to 60%");
 }
 
 function changeBorderColor(playerStatus) {
-  var color;
-  if (playerStatus == -1) {
-    color = "#37474F"; // unstarted = gray
-  } else if (playerStatus == 0) {
-    color = "#FFFF00"; // ended = yellow
-  } else if (playerStatus == 1) {
-    color = "#33691E"; // playing = green
-  } else if (playerStatus == 2) {
-    color = "#DD2C00"; // paused = red
-  } else if (playerStatus == 3) {
-    color = "#AA00FF"; // buffering = purple
-  } else if (playerStatus == 5) {
-    color = "#FF6DOO"; // video cued = orange
+  let color;
+  const states = new Set([-1, 0, 2]);
+  // -1 unstarted, 0 ended, 1playing, 2 paused
+  if (playerStatus == 1) {
+    color = "rgb(237, 106, 90)";
+  } else if (states.has(playerStatus)) {
+    color = "rgb(185, 146, 159)";
   }
   if (color) {
     document.getElementById("video").style.borderColor = color;
@@ -75,10 +79,10 @@ function onPlayerStateChange(event) {
   changeBorderColor(event.data);
 }
 
-videoLink = document.querySelector("#video-hyperlink");
-videoPopUp = document.querySelector(".video-pop-up");
-overlay = document.querySelector("#overlay");
-closebtn = document.querySelector(".close-btn");
+const videoLink = document.querySelector("#video-hyperlink");
+const overlay = document.querySelector("#overlay");
+const videoPopUp = document.querySelector(".video-pop-up");
+const closebtn = document.querySelector(".close-btn");
 
 videoLink.addEventListener("click", showVideo);
 closebtn.addEventListener("click", hideVideo);
@@ -88,7 +92,6 @@ closebtn.addEventListener("click", hideVideo);
  * if the video was paused previously it would continue playing
  */
 function showVideo() {
-  console.log("show video");
   overlay.style.display = "block";
   videoPopUp.style.display = "block";
   player.playVideo();
@@ -99,7 +102,6 @@ function showVideo() {
  * video will pause
  */
 function hideVideo() {
-  console.log("display video");
   videoPopUp.style.display = "none";
   overlay.style.display = "none";
   player.pauseVideo();
