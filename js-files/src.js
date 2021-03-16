@@ -1,22 +1,29 @@
+//-------------Intro section | Arrow button -------------
 // This code changes the arrow color in the intro page
-// while the mouse hover in and out of the arrow
+// while the mouse hover in and out of the arrow.
 
 const downArrow = document.querySelector(".down-arrow img");
 
-downArrow.addEventListener("mouseover", changeOnHover, false);
-downArrow.addEventListener("mouseout", changeOutHover, false);
+downArrow.addEventListener(
+  "mouseover",
+  () => {
+    downArrow.setAttribute("src", "images/downArrowHover.svg");
+  },
+  false
+);
 
-function changeOnHover() {
-  downArrow.setAttribute("src", "images/downArrowHover.svg");
-}
+downArrow.addEventListener(
+  "mouseout",
+  () => {
+    downArrow.setAttribute("src", "images/downArrow.svg");
+  },
+  false
+);
 
-function changeOutHover() {
-  downArrow.setAttribute("src", "images/downArrow.svg");
-}
+//-------------Tab code for education and work section -------------
 
 const texts = document.querySelectorAll(".tab-content");
-const buttonInFocus = document.querySelectorAll(".tab-button");
-console.log(buttonInFocus);
+const tabButtons = document.querySelectorAll(".tab-button");
 /**
  * @param {String} contentType;
  * Controls the content displayed on the tab menu in the education section,
@@ -25,22 +32,24 @@ console.log(buttonInFocus);
  * the focus class
  */
 function openTab(contentType) {
-  const textId = "#" + contentType;
-  const buttonSelector = ".tab-button" + "." + contentType;
+  const textId = `#${contentType}`;
+  const buttonSelector = `.tab-button.${contentType}`;
   const selectedText = document.querySelector(textId);
   const selectedButton = document.querySelector(buttonSelector);
   // x is the array containing the content that each button is suppossed to display
   for (let i = 0; i < texts.length; i++) {
     // desactivates any text that is not being selected.
     texts[i].style.display = texts[i] === selectedText ? "block" : "none";
-    if (buttonInFocus[i] == selectedButton) {
-      buttonInFocus[i].classList.add("focus");
+    if (tabButtons[i] == selectedButton) {
+      tabButtons[i].classList.add("focus");
     } else {
       // remove the class focus in not selected buttons.
-      buttonInFocus[i].classList.remove("focus");
+      tabButtons[i].classList.remove("focus");
     }
   }
 }
+
+// ----------------------Projects section | embeded video--------------------
 
 // This code uses Iframe player API
 // todo  start to play the video when the video is shown

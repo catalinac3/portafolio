@@ -1,23 +1,18 @@
 /* Color Palette
-https://coolors.co/261132-f0a202-f5f9e9-64403e-ed6a5a-fffdfd
 Englisch lavender: rgb(185, 146, 159);
 terra-cotta (rosa): rgb(237, 106, 90);
 white: rgb(255, 253, 253);
-grape: rgba(38, 17, 50, 0.5)
+grape: rgba(38, 17, 50, 0.5);
+dark gray: rgba(136,136,136); #888
 --------
-marigold: rgb(240, 162, 2);  not used
-ivory (white): rgb(245, 249, 233);
-rose-ebony: rgb(100, 64, 62);
-
-
-*/
-/* Global styles
----------------------------------*/
-
 /* font-families
 "Open Sans", sans-serif
 "Lato", sans-serif
 */
+
+*/
+/* Global styles
+---------------------------------*/
 
 /* The Box Model Fix*/
 html {
@@ -38,8 +33,7 @@ html {
   /* Make room for the icons bar on the right and the same space on
    * the left. */
   width: calc(90% - 64px);
-  /* placed the text in the middle 
-    without affecting the background colors */
+  /* placed the text in the middle */
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -79,15 +73,6 @@ h3 {
   margin-bottom: 0;
 }
 
-a {
-  color: black;
-}
-
-a:hover {
-  /* the underline of the link is removed*/
-  text-decoration: none;
-  color: rgba(237, 106, 90);
-}
 i {
   font-size: 23px;
 }
@@ -100,294 +85,6 @@ button {
   text-align: center;
 }
 
-button i {
-  vertical-align: sub;
-}
-
-/* match section selectors that are direct child of the 
-div with class divider */
-.divider > section {
-  /* To separate the content of the project from the border */
-  border-bottom: 1px dashed rgb(38, 17, 50);
-  padding: 25px 0;
-}
-/* takes off the dotted border 
-on the last item of sections job and projects */
-.divider > section:last-child {
-  border-bottom: none;
-}
-
-/* ----vertical bar ---- */
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  width: 24px;
-  right: 5%;
-  bottom: 26%;
-  text-align: center;
-  z-index: 8;
-}
-
-.icons div {
-  margin-top: 4px;
-}
-
-.vertical {
-  width: 6px;
-  margin: 0 9px;
-  background-color: black;
-  border-radius: 3px;
-  height: 20%;
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-}
-/* ----end vertical bar ---- */
-
-/* INTRODUCTION SECTION
----------------------------------*/
-.intro {
-  background: rgb(185, 146, 159, 0.4);
-}
-
-.dot-dot-dot span {
-  width: 0.2em;
-  height: 0.2em;
-  margin: 0 0.2em;
-  background-color: black;
-  border-radius: 50%;
-  display: inline-block;
-  animation: jumping-dots 1.4s 5;
-  /*linear --> same speed from the beginning to the end */
-  animation-timing-function: linear;
-}
-
-/* second dot */
-.dot-dot-dot span:nth-child(2) {
-  animation-delay: 0.4s;
-}
-/* third dot */
-.dot-dot-dot span:nth-child(3) {
-  animation-delay: 0.8s;
-}
-
-/*keyframes to define intermediate
-steps of an animation*/
-@keyframes jumping-dots {
-  40% {
-    transform: translateY(0em);
-  }
-  50% {
-    transform: translateY(-0.5em);
-  }
-}
-
-.list-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.list {
-  margin: 0 1em;
-}
-.list ol {
-  padding: 0;
-}
-
-.list li {
-  list-style-type: none;
-  font-size: 150%;
-}
-
-.down-arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -35px;
-}
-
-.down-arrow:hover {
-  animation: indicate 1.4s infinite;
-  animation-timing-function: ease-out;
-}
-
-@keyframes indicate {
-  10% {
-    transform: translateY(0.8em);
-  }
-  100% {
-    transform: translateY(0em);
-  }
-}
-
-/* PROJECTS SECTIONS
----------------------------------*/
-.projects {
-  background: rgb(255, 253, 253);
-}
-.projects img {
-  width: 300px;
-}
-.projects a {
-  color: rgb(185, 146, 159);
-}
-.projects a:hover {
-  color: rgba(237, 106, 90);
-}
-.animated-link:hover {
-  display: inline-block;
-  animation: vibrate 1.4s infinite;
-  animation-timing-function: linear;
-}
-@keyframes vibrate {
-  25% {
-    transform: rotateZ(20deg);
-  }
-
-  75% {
-    transform: rotateZ(-20deg);
-  }
-}
-
-/* The class of btn is used for the link of the project 
-to the source code, to avoid the btn style on a paragraph.*/
-.projects button {
-  background: rgb(255, 253, 253);
-  border: 1px solid rgb(185, 146, 159);
-  display: inline-block;
-}
-
-.projects button:hover {
-  background: rgba(237, 106, 90);
-  border-color: rgba(237, 106, 90);
-}
-.project-item {
-  /* overflow is a way to clear the float
-    style */
-  overflow: hidden;
-}
-/*padding-bottom: 30px;*/
-.project-item h3 {
-  margin-top: 0;
-}
-.close-btn {
-  /*absolute: position relative to the nearest 
-  positioned ancestor*/
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 1px 5px;
-  font-size: 1.25rem;
-}
-
-.video-pop-up {
-  display: none;
-  /*fixed: is position relative to the viewport
-  it stays in the same place even if the page is 
-  scrolled */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  /*opacity: 0;*/
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(38, 17, 50, 0.5);
-}
-
-/* ALL EDUCATION AND WORK
----------------------------------*/
-/* Tab ---------------------------------*/
-.education-and-work {
-  height: 500px;
-  background-color: rgba(237, 106, 90, 0.3);
-}
-
-.tab-container {
-  padding-bottom: 0;
-  border-color: rgba(237, 106, 90);
-}
-
-.tab-bar {
-  border-color: rgba(237, 106, 90);
-  border-bottom-style: solid;
-  border-width: 2px;
-  padding: 0 10px;
-  z-index: 2;
-}
-
-.tab-button {
-  border: solid;
-  border-color: white;
-  border-width: 1px 1px 0 1px;
-  margin-bottom: -2px;
-  z-index: 4;
-}
-
-.tab-button:hover {
-  border-color: rgba(237, 106, 90);
-}
-
-/* when the button is active */
-.focus {
-  /* focus has a default outline */
-  outline: none;
-  border-color: rgba(237, 106, 90);
-  background-color: white;
-  border-width: 2px 2px 0 2px;
-}
-
-/* Tab Content--------------------------------*/
-
-.all-tab-content {
-  position: relative;
-  height: 80%;
-}
-
-.all-tab-content p {
-  width: 60%;
-  margin: 0 15px;
-}
-
-.tab-content {
-  background: white;
-  border: 2px solid rgb(237, 106, 90);
-  border-top: 0;
-  position: relative;
-  height: 70%;
-  padding-top: 0;
-}
-
-.item-details {
-  overflow: auto;
-}
-
-.item-details h3,
-.item-details h2 {
-  margin-inline-start: 5px;
-}
-/* + matches to the first paragraph that comes
-after h3  */
-.item-details h3 + p {
-  font-style: italic;
-}
-
-/* hides the titles for large screens */
-/* + matches to the first h2 that comes
-  */
-.item-details h2:first-child {
-  display: none;
-}
 /* --------scrollbar------------ */
 /* width */
 ::-webkit-scrollbar {
@@ -409,28 +106,325 @@ after h3  */
   background: rgb(237, 106, 90);
   /* background: #555; */
 }
+/* --------end scrollbar------------ */
+
+/* ----vertical bar with links ---- */
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 24px;
+  right: 5%;
+  bottom: 26%;
+  text-align: center;
+  z-index: 8;
+}
+
+.icons div {
+  margin-top: 4px;
+}
+
+.icons a {
+  color: black;
+}
+
+.icons a:hover {
+  /* the underline of the link is removed*/
+  text-decoration: none;
+  color: rgba(237, 106, 90);
+}
+.vertical {
+  width: 6px;
+  margin: 0 9px;
+  background-color: black;
+  border-radius: 3px;
+  height: 20%;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+/* ----end vertical bar ---- */
+
+/* INTRODUCTION SECTION
+---------------------------------*/
+.intro {
+  background: rgb(185, 146, 159, 0.4);
+}
+
+/* creates ellipsis and styles them*/
+.dot-dot-dot span {
+  width: 0.2em;
+  height: 0.2em;
+  margin: 0 0.2em;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  animation: jumping-dots 1.4s 5;
+  /*linear --> same speed from the beginning to the end */
+  animation-timing-function: linear;
+}
+
+/* second dot */
+.dot-dot-dot span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+/* third dot */
+.dot-dot-dot span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/*animation of the ellipsis*/
+@keyframes jumping-dots {
+  40% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: translateY(-0.5em);
+  }
+}
+
+/* skill and tools list*/
+.list-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.list {
+  margin: 0 1em;
+}
+.list ol {
+  padding: 0;
+}
+
+.list li {
+  list-style-type: none;
+  font-size: 150%;
+}
+
+/*down-arrow button*/
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.down-arrow:hover {
+  animation: indicate 1.4s infinite;
+  animation-timing-function: ease-out;
+}
+
+/* animation of the down arrow button */
+@keyframes indicate {
+  10% {
+    transform: translateY(0.8em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+
+/* PROJECTS SECTIONS
+---------------------------------*/
+.projects {
+  background: rgb(255, 253, 253);
+  display: inline-grid;
+  /* minimum width of the card is 300px
+    when 2 of the card won't fit, then 1fr has 
+    been declared as max width */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(2, 1fr); */
+
+  /* includes gap between rows and columns */
+  grid-gap: 1rem;
+}
+.projects img {
+  width: 280px;
+}
+.camara {
+  color: rgb(185, 146, 159);
+}
+.camara:hover {
+  color: rgba(237, 106, 90);
+}
+.animated-camara:hover {
+  display: inline-block;
+  animation: vibrate 1.4s infinite;
+  animation-timing-function: linear;
+}
+
+/* animation of the camara icon */
+@keyframes vibrate {
+  25% {
+    transform: rotateZ(20deg);
+  }
+
+  75% {
+    transform: rotateZ(-20deg);
+  }
+}
+
+.projects form {
+  display: inline-block
+}
+
+.projects button {
+  background: rgb(255, 253, 253);
+  border: 1px solid rgb(185, 146, 159);
+}
+
+.projects button:hover {
+  border-width: 2px;
+  border-color: rgba(237, 106, 90);
+}
+
+.project-item {
+  border: 1px solid #eee;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 3px;
+}
+/*padding-bottom: 30px;*/
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.video-pop-up {
+  display: none;
+  /*fixed: is position relative to the viewport
+  it stays in the same place even if the page is 
+  scrolled */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.close-btn {
+  /*absolute: position relative to the nearest 
+  positioned ancestor*/
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1px 5px;
+  font-size: 1.25rem;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  /*opacity: 0;*/
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(38, 17, 50, 0.5);
+}
+
+/* ALL EDUCATION AND WORK
+---------------------------------*/
+.education-and-work {
+  height: 500px;
+  background-color: rgba(237, 106, 90, 0.3);
+}
+
+/* Tab ---------------------------------*/
+
+.tab-container {
+  padding-bottom: 0;
+  border-color: rgba(237, 106, 90);
+}
+
+.tab-bar {
+  border-color: rgba(237, 106, 90);
+  border-bottom-style: solid;
+  border-width: 2px;
+  padding: 0 10px;
+  z-index: 2;
+}
+
+.tab-button {
+  border: solid;
+  /* top color | left-right color | bottom color */
+  border-color: white white rgba(237, 106, 90);
+  border-width: 1px 1px 2px 1px;
+  margin-bottom: -2px;
+}
+
+.tab-button:hover {
+  border-top-color: rgba(237, 106, 90);
+  border-right-color: rgba(237, 106, 90);
+  border-left-color: rgba(237, 106, 90);
+}
+
+/* when the button is active */
+.focus {
+  /* focus has a default outline */
+  outline: none;
+  border-color: rgba(237, 106, 90) rgba(237, 106, 90) white;
+  background-color: white;
+  border-width: 2px 2px 2px 2px;
+  margin-bottom: -2px;
+}
+
+/* Tab Content--------------------------------*/
+
+.all-tab-content {
+  position: relative;
+  height: 80%;
+}
+
+.all-tab-content p {
+  width: 60%;
+  margin: 0 15px;
+}
+
+.tab-content {
+  background: white;
+  border: 2px solid rgb(237, 106, 90);
+  border-top: 0;
+  position: relative;
+  height: 70%;
+  padding-top: 0;
+  overflow: auto;
+}
+
+.tab-content h3,
+.tab-content h2 {
+  margin-inline-start: 5px;
+}
+/* + matches to the first paragraph that comes
+after h3  */
+.tab-content h3 + p {
+  font-style: italic;
+}
+
+/* hides the titles for large screens */
+.tab-content h2:first-child {
+  display: none;
+}
+
+.tab-content h2 {
+  color: rgb(237, 106, 90);
+}
+
 /* Footer
 ---------------------------------*/
 footer {
   border: black;
-  background-color: #888;
+  background-color: rgba(136, 136, 136, 0.9);
   color: white;
-  /* background-color: rgb(105, 105, 105); */
-  /* color: white; */
   text-align: center;
   padding: 20px 0;
 }
 
 /* Responsive
 ---------------------------------*/
-
-@media screen and (min-width: 850px) {
-  .project-item img {
-    float: left;
-    margin-right: 20px;
-  }
-}
-
 @media screen and (min-width: 700px) {
   header {
     text-align: center;
@@ -452,7 +446,7 @@ footer {
     display: none;
   }
   /* displays title of the section in small screens */
-  .item-details h2:first-child {
+  .tab-content h2:first-child {
     color: rgba(237, 106, 90);
     display: block;
   }

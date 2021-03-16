@@ -85,8 +85,8 @@
               <img
                 src="images/downArrow.svg"
                 alt="continue to the next page"
-                width="50px"
-                height="50px"
+                width="50"
+                height="50"
               />
             </a>
           </div>
@@ -94,10 +94,10 @@
       </section>
 
       <!-- ********************  PROJECTS SECTION ********************* -->
-      <section id="projects-section" class="full-screen projects">
-        <div class="container-text divider">
-          <h2>Programming Projects</h2>
 
+      <section id="projects-section" class="full-screen container-text">
+        <h2>Programming Projects</h2>
+        <div class="projects">
           <!-- Project 1 -->
           <section class="project-item">
             <img
@@ -107,8 +107,8 @@
             />
             <h3>Weather app</h3>
             <!-- video pop up -->
-            <div class="animated-link">
-              <a href="#video-pop-up" id="video-hyperlink"
+            <div class="animated-camara">
+              <a href="#video-pop-up" id="video-hyperlink" class="camara"
                 ><i class="fas fa-video"></i
               ></a>
             </div>
@@ -116,7 +116,6 @@
             <div class="video-pop-up">
               <iframe
                 id="video"
-                type="text/html"
                 width="640"
                 height="360"
                 src="https://www.youtube.com/embed/yvMBvCW3Gpk?enablejsapi=1"
@@ -129,7 +128,8 @@
             </div>
             <div id="overlay"></div>
             <!--  -->
-            <p>API Call | Bootstrap | responsive design | gitflow</p>
+            <p>JavaScript | HTML/CSS | Bootstrap</p>
+            <p>API Call - responsive design - gitflow - use of time stamps</p>
             <!-- <p>
               As the final project of the course "frontEnd Development" at ReDI
               school, I buildt weather app displaying the current weather at the
@@ -137,15 +137,25 @@
               provided by the OpenWeather API. The page is hosted in github
               pages.
             </p> -->
-            <a href="https://catalinac3.github.io/weather-app/.">
-              <button>Weather Website</button></a
+            <form
+              action="https://catalinac3.github.io/weather-app/."
+              method="get"
+              target="_blank"
             >
-            <a href="https://github.com/catalinac3/weather-app">
-              <button>Code</button></a
+              <button type="submit">Weather Website</button>
+            </form>
+
+            <form
+              action="https://github.com/catalinac3/weather-app"
+              method="get"
+              target="_blank"
             >
-            <i class="fab fa-js-square" title="Javascript"></i>
+              <button type="submit">Code</button>
+            </form>
+
+            <!-- <i class="fab fa-js-square" title="Javascript"></i>
             <i class="fab fa-html5" title="HTML"></i>
-            <i class="fab fa-bootstrap" title="Bootstrap"></i>
+            <i class="fab fa-bootstrap" title="Bootstrap"></i> -->
           </section>
 
           <!-- End of project 1 -->
@@ -157,27 +167,32 @@
               alt="tic-tac-toe graphical interface"
             />
             <h3>Tic-tac-toe</h3>
+            <p>Python | Tkinter</p>
             <p>
               As the final project for the course Python 1 at ReDI we sugessted
               the tic-tac-toe in raw python. I found the project fun an took it
               a bit further by making it work in a graphical user interface,
               using the Tkinter library.
             </p>
-            <!--TODO this part I don't understand it: target="_blank" -->
-            <a href="https://github.com/catalinac3/Tic-tac-toe"
-              ><button>Code</button></a
+            <!-- a form is used to make a button behave like a link
+            but with the style of a button -->
+            <form
+              action="https://github.com/catalinac3/Tic-tac-toe"
+              method="get"
+              target="_blank"
             >
-            <i class="fab fa-python" title="Python"></i>
+              <button type="submit">Code</button>
+            </form>
+            <!-- <i class="fab fa-python" title="Python"></i> -->
           </section>
           <!-- End of project 2 -->
         </div>
         <!-- End of Project block. -->
       </section>
-
       <!-- ****************** EDUCATION & WORK EXPERIENCE  ****************** -->
-      <!--------------------- TAB -------------------->
+      <!-- TAB -->
       <section class="education-and-work">
-        <section class="tab-container container-text">
+        <div class="tab-container container-text">
           <div class="tab-bar">
             <!-- onclick event occurs when the user clicks on an element.-->
             <button
@@ -201,38 +216,42 @@
               <span class="button-text">Work Experience</span>
               <i class="fas fa-wrench"></i>
             </button>
-            <button class="tab-button certification" onclick="openTab('certification')">
+            <button
+              class="tab-button certification"
+              onclick="openTab('certification')"
+            >
               <span class="button-text">Certification</span>
               <i class="fa fa-certificate" aria-hidden="true"></i>
             </button>
           </div>
-        </section>
+        </div>
         <!-- TAB CONTENT -->
         <div class="all-tab-content">
-          <!-------------------- PROGRAMMING COURSES ------------------------->
+          <!-- PROGRAMMING COURSES -->
           <div
             id="programmingCourses"
-            class="tab-content container-text item-details"
+            class="tab-content container-text"
             style="display: block"
           >
             <h2>Programming Courses</h2>
             <h3>Front-End Development</h3>
-            <p>ReDI School</p>
-            <p>Munich, Germany</p>
+            <p>ReDI School, Munich, Germany</p>
             <p>Sep 2020 - Dec 2020</p>
 
             <h3>Softwareentwicklungs in der Praxis</h3>
-            <p>Jambit GmbH</p>
-            <p>Munich, Germany</p>
+            <p>Jambit GmbH, Munich, Germany</p>
             <p>Mar 2020 - Apr 2020</p>
 
             <h3>Python for Data Science</h3>
-            <p>ReDI School</p>
-            <p>Munich, Germany</p>
+            <p>ReDI School, Munich, Germany</p>
             <p>Sep 2009 - Jan 2020</p>
             <br />
 
             <h2>Online Programming Courses</h2>
+
+            <h3>JavaScript Essential Trainning</h3>
+            <p>LinkedIn learning</p>
+            <p>Completed in Mar 2021</p>
 
             <h3>CSS Essential Trainning</h3>
             <p>LinkedIn learning</p>
@@ -254,7 +273,7 @@
             <p>Coursera</p>
             <p>Completed in Oct 2019</p>
           </div>
-          <!------------------ UNIVERSITY EDUCATION  -------------------->
+          <!-- UNIVERSITY EDUCATION -->
           <div
             id="formalEducation"
             class="tab-content container-text item-details"
@@ -264,33 +283,27 @@
 
             <!-- Education University Title 1 -->
             <section>
-              <h3>Ludwig-Maximilians-Universität Munich, Germany</h3>
-              <p>Bachelor, Computer Science</p>
+              <h3>Bachelor, Computer Science</h3>
+              <p>Ludwig-Maximilians-Universität, Munich, Germany</p>
               <p>Oct 2020 - today</p>
             </section>
 
             <!-- Education University Title 2 -->
             <section>
-              <h3>The University of Western Ontario - London, Canada</h3>
-              <p>
-                M.E.Sc. Chemical and Biochemical Engineering
-              </p>
+              <h3>M.E.Sc. Chemical and Biochemical Engineering</h3>
+              <p>The University of Western Ontario, London, Canada</p>
               <p>Jul 2010 - Dec 2012</p>
             </section>
 
             <!-- Education University Title 3 -->
             <section>
-              <h3>
-                Universidad Industrial de Santander - Bucaramanga, Colombia
-              </h3>
-              <p>
-                Bachelor of Science, Chemieingenieurwesen
-              </p>
+              <h3>Bachelor of Science, Chemieingenieurwesen</h3>
+              <p>Universidad Industrial de Santander, Bucaramanga, Colombia</p>
               <p>Apr 2003 - Jun 2009</p>
             </section>
           </div>
           <!-- End of University tab-content block. -->
-          <!------------------ wORK EXPERIENCE  -------------------------->
+          <!-- WORK EXPERIENCE -->
           <div
             id="workExperience"
             class="tab-content container-text item-details"
@@ -301,16 +314,14 @@
             <!-- Work Experience 1 -->
             <section>
               <h3>Teacher - Volunteer</h3>
-              <p>
-                ReDI School of Digital Integration - Munich,Germany 
-              </p>
+              <p>ReDI School of Digital Integration, Munich,Germany</p>
               <p>Apr 2020 - Jul 2020</p>
             </section>
 
             <!-- Work Experience 2 -->
             <section>
               <h3>Research and Project Engineer</h3>
-              <p>Memorial University - St. John’s, Canada </p>
+              <p>Memorial University, St. John’s, Canada</p>
               <p>Jun 2013 - Mar 2015</p>
             </section>
 
@@ -318,14 +329,14 @@
             <section>
               <h3>Student Technician</h3>
               <p>
-                TEES Mary Kay O'Connor Process Safety Center- TAMU, College
+                TEES Mary Kay O'Connor Process Safety Center, TAMU, College
                 Station, 10.2008 - 03.2009
               </p>
               <p>Oct 2008 - Mar 2009</p>
             </section>
           </div>
           <!-- End of Work Experience block. -->
-          <!----------------------CERTIFICATIONS ---------------------------->
+          <!-- CERTIFICATIONS -->
           <div
             id="certification"
             class="tab-content container-text item-details heigth-item"
@@ -343,7 +354,7 @@
 
       <!-- **********************  FOOTER  *************************** -->
       <footer>
-        <h3>Catalina Cruz 2021<h3>
+        <h3>Catalina Cruz 2021</h3>
       </footer>
     </main>
   </body>
