@@ -253,9 +253,9 @@ button {
   position: relative;
 }
 
-.project-item:hover {
+/* .project-item:hover {
   transform: scale(1.05);
-}
+} */
 
 .project-image {
   overflow: hidden;
