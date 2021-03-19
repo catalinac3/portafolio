@@ -99,13 +99,15 @@
         <h2>Programming Projects</h2>
         <div class="projects">
           <!-- Project 1 -->
-          <section class="project-item">
-            <img
-              id="image-weather-app"
-              src="images/weatherapp.PNG"
-              alt="general look of the weather app"
-            />
-            <h3>Weather app</h3>
+          <div class="project-item">
+            <div class="project-image">
+              <img
+                id="image-weather-app"
+                src="images/weatherapp.PNG"
+                alt="general look of the weather app"
+              />
+            </div>
+
             <!-- video pop up -->
             <div class="animated-camara">
               <a href="#video-pop-up" id="video-hyperlink" class="camara"
@@ -127,64 +129,64 @@
               </button>
             </div>
             <div id="overlay"></div>
-            <!--  -->
-            <p>JavaScript | HTML/CSS | Bootstrap</p>
-            <p>API Call - responsive design - gitflow - use of time stamps</p>
-            <!-- <p>
-              As the final project of the course "frontEnd Development" at ReDI
-              school, I buildt weather app displaying the current weather at the
-              user's location, or any other city in the world. The data is
-              provided by the OpenWeather API. The page is hosted in github
-              pages.
-            </p> -->
-            <form
-              action="https://catalinac3.github.io/weather-app/."
-              method="get"
-              target="_blank"
-            >
-              <button type="submit">Weather Website</button>
-            </form>
 
-            <form
-              action="https://github.com/catalinac3/weather-app"
-              method="get"
-              target="_blank"
-            >
-              <button type="submit">Code</button>
-            </form>
-
-            <!-- <i class="fab fa-js-square" title="Javascript"></i>
-            <i class="fab fa-html5" title="HTML"></i>
-            <i class="fab fa-bootstrap" title="Bootstrap"></i> -->
-          </section>
+            <div class="project-text">
+              <h3>Weather app</h3>
+              <p>JavaScript | HTML/CSS | Bootstrap</p>
+              <p>
+                API Call - responsive design - gitflow - use of time stamps,
+                off-set times.
+              </p>
+            </div>
+            <div class="project-buttons">
+              <!-- a form is used to make a button behave like a link
+            but with the style of a button -->
+              <form
+                action="https://catalinac3.github.io/weather-app/."
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Weather Website</button>
+              </form>
+              <form
+                action="https://github.com/catalinac3/weather-app"
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Code</button>
+              </form>
+            </div>
+          </div>
 
           <!-- End of project 1 -->
 
           <!-- Project 2 -->
-          <section class="project-item">
-            <img
-              src="images/ai_tkinter_tic_tac_toe1.PNG"
-              alt="tic-tac-toe graphical interface"
-            />
-            <h3>Tic-tac-toe</h3>
-            <p>Python | Tkinter</p>
-            <p>
-              As the final project for the course Python 1 at ReDI we sugessted
-              the tic-tac-toe in raw python. I found the project fun an took it
-              a bit further by making it work in a graphical user interface,
-              using the Tkinter library.
-            </p>
-            <!-- a form is used to make a button behave like a link
-            but with the style of a button -->
-            <form
-              action="https://github.com/catalinac3/Tic-tac-toe"
-              method="get"
-              target="_blank"
-            >
-              <button type="submit">Code</button>
-            </form>
-            <!-- <i class="fab fa-python" title="Python"></i> -->
-          </section>
+          <div class="project-item">
+            <div class="project-image">
+              <img
+                src="images/ai_tkinter_tic_tac_toe1.PNG"
+                alt="tic-tac-toe graphical interface"
+              />
+            </div>
+            <div class="project-text">
+              <h3>Tic-tac-toe</h3>
+              <p>Python | Tkinter</p>
+              <p>
+                Event oriented programming; use of buttons, radio buttons, input
+                field, grid layout, frames - score tracking
+              </p>
+            </div>
+
+            <div class="project-buttons">
+              <form
+                action="https://github.com/catalinac3/Tic-tac-toe"
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Code</button>
+              </form>
+            </div>
+          </div>
           <!-- End of project 2 -->
         </div>
         <!-- End of Project block. -->
@@ -194,7 +196,7 @@
       <section class="education-and-work">
         <div class="tab-container container-text">
           <div class="tab-bar">
-            <!-- onclick event occurs when the user clicks on an element.-->
+            <!-- tab buttons -->
             <button
               class="tab-button focus programmingCourses"
               onclick="openTab('programmingCourses')"

@@ -227,21 +227,76 @@ button {
 
 /* PROJECTS SECTIONS
 ---------------------------------*/
+
 .projects {
   background: rgb(255, 253, 253);
   display: inline-grid;
   /* minimum width of the card is 300px
     when 2 of the card won't fit, then 1fr has 
     been declared as max width */
+
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  /* grid-template-columns: repeat(2, 1fr); */
+
+  /* grid-auto-rows: 400px; */
 
   /* includes gap between rows and columns */
   grid-gap: 1rem;
 }
-.projects img {
-  width: 280px;
+/* grid-template-columns: repeat(3, 1fr); */
+.project-item {
+  border: 1px solid #eee;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0 2px 3px #ccc;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 3px;
+  position: relative;
 }
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  overflow: hidden;
+  text-align: center;
+}
+.projects img {
+  height: 170px;
+}
+
+/*camara container */
+.animated-camara {
+  position: absolute;
+  right: 15px;
+}
+.project-text {
+  margin-bottom: 30px;
+}
+.project-item h3 {
+  margin-top: 0;
+}
+.project-item form {
+  display: inline-block;
+}
+.project-buttons {
+  position: absolute;
+  bottom: 10px;
+}
+
+.projects button {
+  background: rgb(255, 253, 253);
+  border: 1px solid rgb(185, 146, 159);
+}
+
+.projects button:hover {
+  border-width: 2px;
+  border-color: rgba(237, 106, 90);
+}
+
+
+
+/* camara animation and design */
 .camara {
   color: rgb(185, 146, 159);
 }
@@ -264,35 +319,9 @@ button {
     transform: rotateZ(-20deg);
   }
 }
+/* end of camara animation and design */
 
-.projects form {
-  display: inline-block
-}
-
-.projects button {
-  background: rgb(255, 253, 253);
-  border: 1px solid rgb(185, 146, 159);
-}
-
-.projects button:hover {
-  border-width: 2px;
-  border-color: rgba(237, 106, 90);
-}
-
-.project-item {
-  border: 1px solid #eee;
-  /* offset-x | offset-y | blur-radius | color */
-  box-shadow: 0 2px 3px #ccc;
-  margin: 10px 0;
-  padding: 20px;
-  border-radius: 3px;
-}
-/*padding-bottom: 30px;*/
-
-.project-item h3 {
-  margin-top: 0;
-}
-
+/* pop up styles */
 .video-pop-up {
   display: none;
   /*fixed: is position relative to the viewport
@@ -325,6 +354,7 @@ button {
   bottom: 0;
   background-color: rgba(38, 17, 50, 0.5);
 }
+/* end pop up styles */
 
 /* ALL EDUCATION AND WORK
 ---------------------------------*/
