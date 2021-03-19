@@ -9,7 +9,7 @@
     <title>Catalina's portfolio</title>
     <!-- importing google fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <!-- importing awesome fonts icons -->
@@ -20,339 +20,343 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- IFrame Player API  -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js-files/src.js" defer></script>
   </head>
   <body>
     <main>
-      <!-- ***********************  ABOUT / PROFILE  *********************** -->
-      <header>
-        <div class="container-text">
-          <h1>Catalina Cruz</h1>
-          <h2>
-            Engineer with experience in research, intercultural competences, and
-            IT affinity
-          </h2>
-
-          <p>
-            Chemical Engineer with a master in science and research experience,
-            I'm building my way towards a Software Developer career. Making
-            online and classroom courses, learning through project based
-            programs, also trying my own projects, as it is the case of this
-            portafolio.
-          </p>
-          <p>
-            I'm curious and responsible and always looking after the way things
-            work.
-          </p>
+      <!-- links fixed to the right margin of the page -->
+      <div class="icons">
+        <div>
+          <a
+            href="https://www.linkedin.com/in/catalina-cruz-187138194"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
-      </header>
+        <div>
+          <a href="https://github.com/catalinac3" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <div>
+          <a href="mailto:cdianacatalina@gmail.com"
+            ><i class="fas fa-envelope-square"></i
+          ></a>
+        </div>
+      </div>
+      <div class="vertical"></div>
+      <!-- ***********************  INTRODUCTION SECTION *********************** -->
+      <section class="intro full-screen">
+        <div class="container-text">
+          <header>
+            <h1>Catalina Cruz</h1>
+            <h2>
+              Software Developer in progress
+              <!-- ellipsis -->
+              <span class="dot-dot-dot">
+                <span></span><span></span><span></span>
+              </span>
+            </h2>
+          </header>
+          <!-- skills & tool list -->
+          <div class="list-wrapper">
+            <div class="list">
+              <h2>Skills</h2>
+              <ol>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ol>
+            </div>
+            <div class="list">
+              <h2>Tools</h2>
+              <ol>
+                <li>VS Code</li>
+                <li>Git</li>
+              </ol>
+            </div>
+          </div>
+          <!-- button to continue to the next page -->
+          <div class="down-arrow">
+            <a href="#projects-section">
+              <img
+                src="images/downArrow.svg"
+                alt="continue to the next page"
+                width="50"
+                height="50"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-      <section class="projects">
-        <div class="container-text divider">
-          <h2>Programming Projects</h2>
+      <!-- ********************  PROJECTS SECTION ********************* -->
 
+      <section id="projects-section" class="full-screen container-text">
+        <h2>Programming Projects</h2>
+        <div class="projects">
           <!-- Project 1 -->
-          <section class="project-item">
-            <img
-              src="images/ai_tkinter_tic_tac_toe1.PNG"
-              alt="tic-tac-toe graphical interface"
-            />
-            <h3>Tic-tac-toe</h3>
-            <p>
-              As the final project for the course Python 1 at ReDI we sugessted
-              the tic-tac-toe in raw python. I found the project fun an took it
-              a bit further by making it work in a graphical user interface,
-              using the Tkinter library.
-            </p>
-            <!--TODO this part I don't understand it: target="_blank" -->
-            <a href="https://github.com/catalinac3/Tic-tac-toe"
-              ><button>Code</button></a
-            >
-            <i class="fab fa-python" title="Python"></i>
-          </section>
+          <div class="project-item">
+            <div class="project-image">
+              <img
+                id="image-weather-app"
+                src="images/weatherapp.PNG"
+                alt="general look of the weather app"
+              />
+            </div>
+
+            <!-- video pop up -->
+            <div class="animated-camara">
+              <a href="#video-pop-up" id="video-hyperlink" class="camara"
+                ><i class="fas fa-video"></i
+              ></a>
+            </div>
+
+            <div class="video-pop-up">
+              <iframe
+                id="video"
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/yvMBvCW3Gpk?enablejsapi=1"
+                allowfullscreen
+                style="border: solid 4px black"
+              ></iframe>
+              <button class="close-btn">
+                <i class="fas fa-video-slash"></i>
+              </button>
+            </div>
+            <div id="overlay"></div>
+
+            <div class="project-text">
+              <h3>Weather app</h3>
+              <p>JavaScript | HTML/CSS | Bootstrap</p>
+              <p>
+                API Call - responsive design - gitflow - use of time stamps,
+                off-set times.
+              </p>
+            </div>
+            <div class="project-buttons">
+              <!-- a form is used to make a button behave like a link
+            but with the style of a button -->
+              <form
+                action="https://catalinac3.github.io/weather-app/."
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Weather Website</button>
+              </form>
+              <form
+                action="https://github.com/catalinac3/weather-app"
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Code</button>
+              </form>
+            </div>
+          </div>
+
           <!-- End of project 1 -->
 
           <!-- Project 2 -->
-          <section class="project-item">
-            <img
-              id="image-weather-app"
-              src="images/weatherapp.PNG"
-              alt="general look of the weather app"
-            />
-            <h3>Weather app</h3>
-            <!-- video pop up -->
-            <a href="#video-pop-up" id="video-hyperlink"
-              ><i class="fas fa-video"></i
-                ></a>
-
-            <div id="video-pop-up">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/yvMBvCW3Gpk"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-              <button class="close-btn"><i class="fas fa-video-slash"></i
-                ></button>
+          <div class="project-item">
+            <div class="project-image">
+              <img
+                src="images/ai_tkinter_tic_tac_toe1.PNG"
+                alt="tic-tac-toe graphical interface"
+              />
             </div>
-            <div id="overlay"></div>
-            <!--  -->
-            <p>
-              As the final project of the course "frontEnd Development" at ReDI
-              school, I buildt weather app displaying the current weather at the
-              user's location, or any other city in the world. The data is
-              provided by the OpenWeather API. The page is hosted in github
-              pages.
-            </p>
-            <a href="https://catalinac3.github.io/weather-app/.">
-              <button>Weather Website</button></a
-            >
-            <a href="https://github.com/catalinac3/weather-app">
-              <button>Code</button></a
-            >
-            <i class="fab fa-js-square" title="Javascript"></i>
-            <i class="fab fa-html5" title="HTML"></i>
-            <i class="fab fa-bootstrap" title="Bootstrap"></i>
-          </section>
+            <div class="project-text">
+              <h3>Tic-tac-toe</h3>
+              <p>Python | Tkinter</p>
+              <p>
+                Event oriented programming; use of buttons, radio buttons, input
+                field, grid layout, frames - score tracking
+              </p>
+            </div>
 
+            <div class="project-buttons">
+              <form
+                action="https://github.com/catalinac3/Tic-tac-toe"
+                method="get"
+                target="_blank"
+              >
+                <button type="submit">Code</button>
+              </form>
+            </div>
+          </div>
           <!-- End of project 2 -->
         </div>
         <!-- End of Project block. -->
       </section>
-
-      <!-- ***********************  WORK EXPERIENCE  *********************** -->
-      <section class="work-experience">
-        <div class="container-text item-details divider">
-          <h2>Work Experience</h2>
-
-          <!-- Job 1 -->
-          <section class="job-item">
-            <div class="job-detail">
-              <h3>Teacher - Volunteer</h3>
-              <p>ReDI School of Digital Integration, Python I course</p>
-              <p>Munich, Germany</p>
-              <p>04.2020 - 07.2020</p>
-            </div>
-            <div class="job-summary">
-              <ul>
-                <li>Helped groups of 3 or 4 students during code exercises.</li>
-                <li>
-                  Helped with organization, proposing, and building code to
-                  distribute students in a random manner in smaller online
-                  groups.
-                </li>
-                <li>
-                  Presented one of the options for the final projects and helped
-                  students through the process of building it.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Job 2 -->
-          <section class="job-item">
-            <div class="job-detail">
-              <h3>Research and Project Engineer</h3>
-              <p>Memorial University</p>
-              <p>St. John’s, Canada</p>
-              <p>06.2013 - 03.2015</p>
-            </div>
-            <div class="job-summary">
-              <p>
-                Worked in technology development in the field of renewable
-                energy on a torrefaction unit: in the commissioning, production
-                and product evaluation. Presented unit operation demonstration,
-                and wrote a technical report to the funding organization.
-                Researched on the self-heating effect of torrefied sawmills and
-                published results.
-              </p>
-              <ul>
-                <li>Production and product evaluation of bio-coal</li>
-                <li>Supervised undergraduate and graduate students</li>
-                <li>Wrote technical reports</li>
-                <li>
-                  Published
-                  <a
-                    href="https://www.sciencedirect.com/science/article/abs/pii/S0016236115007887?via%3Dihub"
-                  >
-                    review paper</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Job 3 -->
-          <section class="job-item">
-            <div class="job-detail">
-              <h3>Student Technician</h3>
-              <p>TEES Mary Kay O'Connor Process Safety Center-TAMU</p>
-              <p>College Station, USA</p>
-              <p>10.2008 - 03.2009</p>
-            </div>
-            <div class="job-summary">
-              <p>
-                Conducted research on a project concerning the “Consequence
-                Analysis of BLEVE Based on the Mexico Disaster (1984)”
-              </p>
-            </div>
-          </section>
+      <!-- ****************** EDUCATION & WORK EXPERIENCE  ****************** -->
+      <!-- TAB -->
+      <section class="education-and-work">
+        <div class="tab-container container-text">
+          <div class="tab-bar">
+            <!-- tab buttons -->
+            <button
+              class="tab-button focus programmingCourses"
+              onclick="openTab('programmingCourses')"
+            >
+              <span class="button-text">Programming Courses</span
+              ><i class="fas fa-laptop-code"></i>
+            </button>
+            <button
+              class="tab-button formalEducation"
+              onclick="openTab('formalEducation')"
+            >
+              <span class="button-text">Formal education</span>
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            </button>
+            <button
+              class="tab-button workExperience"
+              onclick="openTab('workExperience')"
+            >
+              <span class="button-text">Work Experience</span>
+              <i class="fas fa-wrench"></i>
+            </button>
+            <button
+              class="tab-button certification"
+              onclick="openTab('certification')"
+            >
+              <span class="button-text">Certification</span>
+              <i class="fa fa-certificate" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-        <!-- End of Job block. -->
-      </section>
-      <!-- ****************** ALL EDUCATION  ****************** -->
-      <!--------------------- TAB - EDUCATION  -------------------->
-      <section class="tab-container container-text">
-        <div class="tab-bar">
-          <!-- onclick event occurs when the user clicks on an element.-->
-          <button
-            id="start-focus"
-            class="tab-button"
-            onclick="openEducation('programmingCourses')"
+        <!-- TAB CONTENT -->
+        <div class="all-tab-content">
+          <!-- PROGRAMMING COURSES -->
+          <div
+            id="programmingCourses"
+            class="tab-content container-text"
+            style="display: block"
           >
-            <span class="button-text">Programming Courses</span
-            ><i class="fas fa-laptop-code"></i>
-          </button>
-          <button class="tab-button" onclick="openEducation('formalEducation')">
-            <span class="button-text">Formal education</span>
-            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          </button>
-          <button class="tab-button" onclick="openEducation('Certification')">
-            <span class="button-text">Certification</span>
-            <i class="fa fa-certificate" aria-hidden="true"></i>
-          </button>
+            <h2>Programming Courses</h2>
+            <h3>Front-End Development</h3>
+            <p>ReDI School, Munich, Germany</p>
+            <p>Sep 2020 - Dec 2020</p>
+
+            <h3>Softwareentwicklungs in der Praxis</h3>
+            <p>Jambit GmbH, Munich, Germany</p>
+            <p>Mar 2020 - Apr 2020</p>
+
+            <h3>Python for Data Science</h3>
+            <p>ReDI School, Munich, Germany</p>
+            <p>Sep 2009 - Jan 2020</p>
+            <br />
+
+            <h2>Online Programming Courses</h2>
+
+            <h3>JavaScript Essential Trainning</h3>
+            <p>LinkedIn learning</p>
+            <p>Completed in Mar 2021</p>
+
+            <h3>CSS Essential Trainning</h3>
+            <p>LinkedIn learning</p>
+            <p>Completed in Aug 2020</p>
+
+            <h3>HTML Essential Trainning</h3>
+            <p>LinkedIn learning</p>
+            <p>Completed in Aug 2020</p>
+
+            <h3>Let's Git - Versionsverwaltung und Open Source</h3>
+            <p>Open Hasso Plattner Institute</p>
+            <p>Completed in Jun 2020</p>
+
+            <h3>Python Classes and Inheritance</h3>
+            <p>Coursera</p>
+            <p>Completed in Nov 2019</p>
+
+            <h3>Python for Everybody Specialization</h3>
+            <p>Coursera</p>
+            <p>Completed in Oct 2019</p>
+          </div>
+          <!-- UNIVERSITY EDUCATION -->
+          <div
+            id="formalEducation"
+            class="tab-content container-text item-details"
+            style="display: none"
+          >
+            <h2>Education</h2>
+
+            <!-- Education University Title 1 -->
+            <section>
+              <h3>Bachelor, Computer Science</h3>
+              <p>Ludwig-Maximilians-Universität, Munich, Germany</p>
+              <p>Oct 2020 - today</p>
+            </section>
+
+            <!-- Education University Title 2 -->
+            <section>
+              <h3>M.E.Sc. Chemical and Biochemical Engineering</h3>
+              <p>The University of Western Ontario, London, Canada</p>
+              <p>Jul 2010 - Dec 2012</p>
+            </section>
+
+            <!-- Education University Title 3 -->
+            <section>
+              <h3>Bachelor of Science, Chemieingenieurwesen</h3>
+              <p>Universidad Industrial de Santander, Bucaramanga, Colombia</p>
+              <p>Apr 2003 - Jun 2009</p>
+            </section>
+          </div>
+          <!-- End of University tab-content block. -->
+          <!-- WORK EXPERIENCE -->
+          <div
+            id="workExperience"
+            class="tab-content container-text item-details"
+            style="display: none"
+          >
+            <h2>Work Experience</h2>
+
+            <!-- Work Experience 1 -->
+            <section>
+              <h3>Teacher - Volunteer</h3>
+              <p>ReDI School of Digital Integration, Munich,Germany</p>
+              <p>Apr 2020 - Jul 2020</p>
+            </section>
+
+            <!-- Work Experience 2 -->
+            <section>
+              <h3>Research and Project Engineer</h3>
+              <p>Memorial University, St. John’s, Canada</p>
+              <p>Jun 2013 - Mar 2015</p>
+            </section>
+
+            <!-- Work Experience 3 -->
+            <section>
+              <h3>Student Technician</h3>
+              <p>
+                TEES Mary Kay O'Connor Process Safety Center, TAMU, College
+                Station, 10.2008 - 03.2009
+              </p>
+              <p>Oct 2008 - Mar 2009</p>
+            </section>
+          </div>
+          <!-- End of Work Experience block. -->
+          <!-- CERTIFICATIONS -->
+          <div
+            id="certification"
+            class="tab-content container-text item-details heigth-item"
+            style="display: none"
+          >
+            <h2>Certification</h2>
+            <h3>Microsoft Certified: Azure Fundamentals</h3>
+            <p>Issued in Jul 2020</p>
+
+            <h3>TestDaf (Test Deutsch als Fremdsprache)</h3>
+            <p>Issued in Feb 2019</p>
+          </div>
         </div>
       </section>
-      <section class="all-education">
-        <!-------------------- PROGRAMMING COURSES ------------------------->
-        <div
-          id="programmingCourses"
-          class="education container-text item-details heigth-item"
-          style="display: block"
-        >
-          <h2>Programming Courses</h2>
-          <h3>Front-End Development</h3>
-          <p>ReDI School</p>
-          <p>Munich, Germany</p>
-          <p>Sep 2020 - Dec 2020</p>
 
-          <h3>Softwareentwicklungs in der Praxis</h3>
-          <p>Jambit GmbH</p>
-          <p>Munich, Germany</p>
-          <p>Mar 2020 - Apr 2020</p>
-
-          <h3>Python for Data Science</h3>
-          <p>ReDI School</p>
-          <p>Munich, Germany</p>
-          <p>Sep 2009 - Jan 2020</p>
-          <br />
-
-          <h2>Online Programming Courses</h2>
-
-          <h3>CSS Essential Trainning</h3>
-          <p>LinkedIn learning</p>
-          <p>Aug 2020</p>
-
-          <h3>HTML Essential Trainning</h3>
-          <p>LinkedIn learning</p>
-          <p>Aug 2020</p>
-
-          <h3>Let's Git - Versionsverwaltung und Open Source</h3>
-          <p>Open Hasso Plattner Institute</p>
-          <p>Jun 2020</p>
-
-          <h3>Python Classes and Inheritance</h3>
-          <p>Coursera</p>
-          <p>Nov 2019</p>
-
-          <h3>Python for Everybody Specialization</h3>
-          <p>Coursera</p>
-          <p>Oct 2019</p>
-        </div>
-        <!------------------ UNIVERSITY EDUCATION  ----------------->
-        <div
-          id="formalEducation"
-          class="education container-text item-details heigth-item"
-          style="display: none"
-        >
-          <h2>Education</h2>
-
-          <!-- Education University Title 1 -->
-          <section>
-            <h3>Ludwig-Maximilians-Universität Munich, Germany</h3>
-            <p>Bachelor, Computer Science , 10.2020 - today</p>
-          </section>
-
-          <!-- Education University Title 2 -->
-          <section>
-            <h3>The University of Western Ontario - London, Canada</h3>
-            <p>
-              M.E.Sc. Chemical and Biochemical Engineering , 05.2010 - 12.2012
-            </p>
-            <p>
-              <a href="https://ir.lib.uwo.ca/etd/1044">Master thesis:</a>
-              'Production of Bio-coal and Activated Carbon from Biomass'
-            </p>
-          </section>
-
-          <!-- Education University Title 3 -->
-          <section>
-            <h3>Universidad Industrial de Santander - Bucaramanga, Colombia</h3>
-            <p>Bachelor of Science, Chemieingenieurwesen , 04.2003 - 06.2009</p>
-            <p>
-              Recognition as 'Ingenieurin' in Germany by the Regierung von
-              Schwaben (government of Swabia) (08.2018)
-            </p>
-          </section>
-        </div>
-        <!-- End of University Education block. -->
-        <!----------------------CERTIFICATIONS ----------------------->
-        <div
-          id="Certification"
-          class="education container-text item-details heigth-item"
-          style="display: none"
-        >
-          <h2>Certification</h2>
-          <h3>Microsoft Certified: Azure Fundamentals</h3>
-          <p>Issued in Jul 2020</p>
-
-          <h3>TestDaf (Test Deutsch als Fremdsprache)</h3>
-          <p>Issued in Feb 2019</p>
-        </div>
-      </section>
-
-      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+      <!-- **********************  FOOTER  *************************** -->
       <footer>
-        <div class="container-text">
-          <h2>Let's Keep in Touch!</h2>
-
-          <!-- Social media and contact links. -->
-          <ul class="contact-list">
-            <li>
-              <a href="mailto:cdianacatalina@gmail.com"
-                >cdianacatalina@gmail.com</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/catalina-cruz-187138194"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/catalinac3" target="_blank">Github</a>
-            </li>
-            <li>
-              <a href="https://glitch.com/@cdianacatalina" target="_blank"
-                >Glitch</a
-              >
-            </li>
-          </ul>
-        </div>
+        <h3>Catalina Cruz 2021</h3>
       </footer>
     </main>
   </body>
