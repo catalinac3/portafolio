@@ -26,6 +26,17 @@
   </head>
   <body>
     <main>
+      <!-- dropdown menu -->
+      <div class="dropdown">
+        <button onclick="handlesDropdown()" class="dropbtn"><i class="fas fa-bars"></i></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#projects-section">Projects</a>
+          <a href="#education-work">Education & Work</a>
+        </div>
+      </div>
+      <!-- end dropdown menu -->
+
       <!-- links fixed to the right margin of the page -->
       <div class="icons">
         <div>
@@ -48,7 +59,7 @@
       </div>
       <div class="vertical"></div>
       <!-- ***********************  INTRODUCTION SECTION *********************** -->
-      <section class="intro full-screen">
+      <section id="home" class="intro full-screen">
         <div class="container-text">
           <header>
             <h1>Catalina Cruz</h1>
@@ -193,7 +204,7 @@
       </section>
       <!-- ****************** EDUCATION & WORK EXPERIENCE  ****************** -->
       <!-- TAB -->
-      <section class="education-and-work">
+      <section id="education-work" class="education-and-work">
         <div class="tab-container container-text">
           <div class="tab-bar">
             <!-- tab buttons -->
