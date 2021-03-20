@@ -10,14 +10,15 @@ dark gray: rgba(136,136,136); #888
 "Lato", sans-serif
 */
 
-*/
 /* Global styles
 ---------------------------------*/
 
 /* The Box Model Fix*/
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 *,
 *:before,
 *after {
@@ -253,10 +254,6 @@ button {
   position: relative;
 }
 
-/* .project-item:hover {
-  transform: scale(1.05);
-} */
-
 .project-image {
   overflow: hidden;
   text-align: center;
@@ -293,8 +290,6 @@ button {
   border-width: 2px;
   border-color: rgba(237, 106, 90);
 }
-
-
 
 /* camara animation and design */
 .camara {
