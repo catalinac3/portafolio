@@ -110,26 +110,29 @@ button {
 /* --------end scrollbar------------ */
 
 /*-------------dropdwon-------------*/
+.dropdown {
+  position: fixed;
+  right: 4%;
+  top: 5%;
+}
+
 .dropbtn {
   cursor: pointer;
   background: rgb(255, 253, 253);
   border: 1px solid;
   padding: 4px;
-  position: fixed;
-  right: 4%;
-  top: 5%;
+  position: absolute;
+  right: 0%;
 }
 
 .dropbtn:hover {
   border-color: rgba(237, 106, 90);
   border: 1px solid rgba(237, 106, 90);
 }
+
 .dropdown-content {
+  margin-top: 32px;
   display: none;
-  position: fixed;
-  right: 4%;
-  top: 10.5%;
-  /* min-width: 160px; */
   z-index: 10;
   background-color: rgb(255, 253, 253);
   border: 0.5px solid rgb(185, 146, 159);
