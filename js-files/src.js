@@ -2,33 +2,6 @@
 // This code changes the arrow color in the intro page
 // while the mouse hover in and out of the arrow.
 
-// -------------Dropdown -------------------------------//
-
-function handlesDropdown() {
-  document.querySelector("#myDropdown").classList.toggle("show");
-}
-
-//Close the dropdown if the user clicks outside of it
-window.onclick = function (event) {
-  console.log('window click was activated');
-  // the second conditions includes the icon inside the button
-  if (
-    !event.target.matches(".dropbtn") &&
-    !event.target.parentNode.matches(".dropbtn")
-  ) {
-    // closes the dropdown when the users does a click outside the dropdown button
-    // on the web page or on a link in the dropdown.
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
-
 const downArrow = document.querySelector(".down-arrow img");
 
 downArrow.addEventListener(
