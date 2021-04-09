@@ -286,10 +286,7 @@ button {
     when 2 of the card won't fit, then 1fr has 
     been declared as max width */
 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-  /* grid-auto-rows: 400px; */
-
+  grid-template-columns: 1fr 1fr 1fr;
   /* includes gap between rows and columns */
   grid-gap: 1rem;
 }
@@ -297,19 +294,20 @@ button {
 .project-item {
   border: 1px solid #eee;
   /* offset-x | offset-y | blur-radius | color */
-  box-shadow: 0 2px 3px #ccc;
+  box-shadow: 0 2px 2px 3px #ccc;
   margin: 10px 0;
   padding: 20px;
   border-radius: 3px;
   position: relative;
+  max-width: 350px;
 }
 
 .project-image {
-  overflow: hidden;
   text-align: center;
 }
 .projects img {
-  height: 170px;
+  max-height: 170px;
+  max-width: 100%;
 }
 
 /*camara container */
@@ -319,6 +317,9 @@ button {
 }
 .project-text {
   margin-bottom: 30px;
+}
+.project-add-info {
+  font-size: 11px;
 }
 .project-item h3 {
   margin-top: 0;
@@ -500,6 +501,11 @@ footer {
 
 /* Responsive
 ---------------------------------*/
+@media screen and (max-width: 1200px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media screen and (min-width: 700px) {
   header {
     text-align: center;
@@ -516,6 +522,9 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
   /* hides the text of the tab for smaller screens */
   .button-text {
     display: none;
@@ -532,6 +541,10 @@ footer {
   }
 }
 @media screen and (max-width: 500px) {
+  #projects-section {
+    width: calc(90% - 30px);
+    margin-left: 10px;
+  }
   h1 {
     font-size: 40px;
   }
@@ -543,6 +556,9 @@ footer {
   }
   h3 {
     font-size: 14px;
+  }
+  .project-item {
+    padding: 20px 10px;
   }
 }
 
